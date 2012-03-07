@@ -21,6 +21,10 @@ Usage
 
     $ ./mount_gridfs --db=db_name --host=localhost --port=port --username=db_username --password=db_password mount_point
 
+    Fallback to default filesystem permissions with mounted files owned by specified user and accessible by users
+    other than the mount owner:
+    $ ./mount_gridfs -o "allow_other,default_permissions,uid=UID_OF_OWNER,gid=GID_OF_OWNER" --db=db_name --host=localhost --port=port --username=db_username --password=db_password mount_point
+
 Current Limitations
 -------------------
 * Must specify all command-line arguments
